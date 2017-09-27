@@ -34,6 +34,29 @@ class user {
 	        return true;
 	}
 
+	public function getOpImage($conn, $username) {
+
+		$stmnt = $conn->prepare("SELECT * FROM users WHERE uid=?");
+		$stmnt->bind_param("s", $st_uid);
+
+		$st_uid = $username;
+
+		$stmnt->execute();
+		$results = $stmnt->get_result();
+
+		$row = $results->fetch_assoc();
+
+		if ($row['usr_img'] == NULL) {
+
+			return "<i class='fa fa-user-o no_usr_img'></i>";
+		}
+
+		else {
+
+			return "<img class='post_usr_img' src='".$row['usr_img']."' />";
+		}
+	}
+
 	public function setUser($conn, $username, $password, $email, $username_length, $password_length) {
 
 		if ($this->check($conn, "uid", $username) == true)
@@ -147,7 +170,19 @@ class user {
 
 		else {
 
-			echo "<h1>".$row['uid']; 
+			echo "<h1>"; 
+
+			if ($row['usr_img'] == NULL) {
+
+				echo "<i class='fa fa-user-o'></i> ";
+			}
+
+			else {
+
+				echo "<img src=".$row['usr_img']." id='username_img'></img> "; 
+			}
+
+			echo $row['uid']; 
 
 			if ($row['BAN'] == 1) {
 
@@ -184,7 +219,7 @@ class user {
 
 		while ($row = $results->fetch_assoc()) {
 
-			echo "<b>User : </b><a href='index.php?usr=".$row['uid']."'>".$row['uid'];
+			echo "<b>User : </b><a href='index.php?usr=".$row['uid']."'><img src=".$row['usr_img']." class='post_usr_img'/>".$row['uid'];
 
 			if ($row['BAN'] == 1) {
 
@@ -275,7 +310,7 @@ class user {
 
 		while ($row = $results->fetch_assoc()) {
 
-			echo "<div class='prv_msg'><p>".$row['content']."</p><i><a href='index.php?usr=".$row['uid']."'>".$row['uid']."</a></i></div>";
+			echo "<div class='prv_msg'><p>".$row['content']."</p><i><a href='index.php?usr=".$row['uid']."'>".$this->getOpImage($conn, $row['uid']).$row['uid']."</a></i></div>";
 		}
 	}
 
@@ -301,4 +336,52 @@ class user {
 			return false;
 		}
 	}
+
+	function setUserImage($conn, $file, $username) {
+
+		if (isset($file)) {
+
+			$fileName = $file['name'];
+			$fileTmpName = $file['tmp_name'];
+			$fileSize = $file['size'];
+			$fileError = $file['error'];
+
+			$fileExt = explode(".", $fileName);
+			$fileActualExt = strtolower(end($fileExt));
+
+			$filesAllowed = array("jpg", "png", "gif");
+
+			if ($fileActualExt == $filesAllowed[0] || $fileActualExt == $filesAllowed[1] || $fileActualExt == $filesAllowed[2]) {
+
+				if ($fileError == 0) {
+
+					$fileNewName = $username."_pic.".$fileActualExt;
+					$fileDestination = 'uploads/'.$fileNewName;
+
+					move_uploaded_file($fileTmpName, $fileDestination);
+
+					$stmnt = $conn->prepare("UPDATE users SET usr_img=? WHERE uid=?");
+					$stmnt->bind_param("ss", $st_fileDestination, $st_uid);
+
+					$st_fileDestination = $fileDestination;
+					$st_uid = $username;
+
+					$stmnt->execute();
+
+					return "Image ".$fileName." uploaded successfuly!";
+				}
+
+				else {
+
+					exit("There was an error uploading your file!");
+				}
+			}
+
+			else {
+
+				exit("Invalid extension (".$fileActualExt.") allowed extensions : JPG, PNG, GIF");
+			}
+		}
+	}
+
 }

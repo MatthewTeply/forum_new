@@ -18,6 +18,29 @@ class posts {
 	        return true;
 	}
 
+	public function getOpImage($conn, $username) {
+
+		$stmnt = $conn->prepare("SELECT * FROM users WHERE uid=?");
+		$stmnt->bind_param("s", $st_uid);
+
+		$st_uid = $username;
+
+		$stmnt->execute();
+		$results = $stmnt->get_result();
+
+		$row = $results->fetch_assoc();
+
+		if ($row['usr_img'] == NULL) {
+
+			return "<i class='fa fa-user-o no_usr_img'></i>";
+		}
+
+		else {
+
+			return "<img class='post_usr_img' src='".$row['usr_img']."' />";
+		}
+	}
+
 	function setPost($conn, $title, $content, $username) {
 
 		$max_len_title = 30;
@@ -80,7 +103,7 @@ class posts {
 		$results = $stmnt->get_result();
 
 		while ($row = $results->fetch_assoc())
-			echo "<a href='index.php?art=".$row['id']."'><h3>".$row['title']."</h3><i><b>".$row['op']."</b> (".$row['date_posted'].")</i></a>";
+			echo "<a href='index.php?art=".$row['id']."'><h3>".$this->getOpImage($conn, $row['op']).$row['title']."</h3><i><b>".$row['op']."</b> (".$row['date_posted'].")</i></a>";
 	}
 
 	function deletePost($conn, $post_id) {
@@ -107,12 +130,12 @@ class posts {
 
 		$row = $results->fetch_assoc();
 
-		echo "<h1>".$row['title']."</h1><p>".$row['content']."</p><i><b>By:</b> <a href='index.php?usr=".$row['op']."'>".$row['op']."</a></i>";			
+		echo "<h1>".$this->getOpImage($conn, $row['op']).$row['title']."</h1><p>".$row['content']."</p><i><b>By:</b> <a href='index.php?usr=".$row['op']."'>".$row['op']."</a></i>";			
 	}
 
 	function setComment_Article($conn, $content, $op, $mid) {
 
-		$max_len_comment = 120;
+		$max_len_comment = 250;
 		$admin = $this->checkAdmin($conn, $_SESSION['209_uid']);
 
 		if (empty($content)) {
@@ -216,7 +239,7 @@ class posts {
 		else {
 
 			while ($row = $results->fetch_assoc())
-				echo "<div><b><a href='index.php?usr=".$row['op']."'>".$row['op']."</a> says : </b> <p>".$row['content']."</p> </div>";			
+				echo "<div><b><a href='index.php?usr=".$row['op']."'>".$this->getOpImage($conn, $row['op']).$row['op']."</a> says : </b> <p>".$row['content']."</p> </div>";			
 		}
 	}
 }

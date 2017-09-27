@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	error_reporting(1);
+	error_reporting(0);
 	include 'db.inc.php';
 ?>
 
@@ -29,6 +29,8 @@
 			<div class="grid _main">
 				<?php if (!isset($_SESSION['209_uid'])): ?>
 					
+					<style type="text/css"> #posts_h1 {display: none;} </style>
+
 					<?php include 'postsfeed.php'; ?>
 					<?php include 'nav.php'; ?>
 
@@ -41,6 +43,7 @@
 				
 				<?php else: ?>
 
+					<h1 id="posts_h1" style="font-weight: 400; margin-top: 10px;">Posts</h1>
 					<?php include 'postsfeed.php'; ?>
 
 				<?php endif ?>

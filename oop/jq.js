@@ -77,7 +77,36 @@ $(document).ready(function() {
 
 	}, 5000);*/
 
+	//=SHOW COMMENT=
+	function showComment() {
+
+		var master_id = $("#mid_comment_art").val();
+
+		$.ajax({
+
+			method: "POST",
+			data: {showComment_call:true, mid:master_id},
+			url: "posts.inc.php",
+			success: function(response) {
+
+				alert(response);
+				$("#article_comment_div").html(response);//.fadeIn(300).append(current_msg);
+			}
+		});
+	}
+
 	//=SET COMMENT=
+
+	$("#content_comment_art").keydown(function() {
+		
+		chars_limit = 250;
+		var chars_no = $("#content_comment_art").val(); 
+
+		chars_limit = chars_limit - chars_no.length;
+
+		$("#chars_left").html(chars_limit);
+	});
+
 	$("#form_comment_art").submit(function(e) {
 		e.preventDefault();
 
@@ -115,8 +144,9 @@ $(document).ready(function() {
 						var current_msg = $("#article_comment_div_top").html();
 
 						$("#no_comments").hide();
-						$("#article_comment_div_top").hide().html(response).fadeIn(300).append(current_msg);
+						showComment();
 						$("#content_comment_art").val("");
+						$("#chars_left").html("250");
 					}
 				},
 				error: function() {
@@ -214,11 +244,6 @@ $(document).ready(function() {
 				if (response == 1) {
 
 					window.location.href = "signout.inc.php?banned";
-				}
-
-				else {
-
-					console.log("Not banned!");
 				}
 			}
 		});

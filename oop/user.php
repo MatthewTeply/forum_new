@@ -9,6 +9,10 @@
 	</div>
 	
 	<?php if ($_GET['usr'] == $_SESSION['209_uid']): ?>
+		<form id="usrImg_form" method="POST" action="users.inc.php" enctype="multipart/form-data">
+			<input type="file" name="usrImg_file">
+			<button name="usrImg_subm">Upload</button>
+		</form>
 		<form id="post_form">
 			<h3>Create a new post</h3>
 			<input class="inp" type="text" id="post_title" placeholder="Title...">

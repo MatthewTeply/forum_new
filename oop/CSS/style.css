@@ -89,6 +89,7 @@ body, html {
 	display: inline-block;
 	width: 50%;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 header {
@@ -255,6 +256,7 @@ main a h3 {
 #user_posts a h3 {
 
 	font-weight: 400;
+	display: inline-block;
 }
 
 main a:hover, #user_posts a:hover {
@@ -264,6 +266,13 @@ main a:hover, #user_posts a:hover {
 	font-size: 18px;
 }
 
+main a i:first-child {
+
+	margin-top: -10px;
+	margin-left: -5px;
+	margin-right: 0px;
+}
+
 main a i, #user_posts a i {
 
 	font-size: 14px;
@@ -271,6 +280,25 @@ main a i, #user_posts a i {
 	bottom: 0px;
 	right: 0px;
 	padding: 10px;
+}
+
+.post_usr_img {
+
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.no_usr_img {
+
+	text-align: center;
+	vertical-align: top;
+	position: relative;
+	margin-top: 3px;
+	margin-right: 10px;
 }
 
 article, section {
@@ -368,6 +396,12 @@ article h1 {
 	margin: -10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid var(--grey_dark);
+}
+
+#form_comment_art h3 span {
+
+	font-weight: 400;
+	font-size: 14px;
 }
 
 #article_comment_div {
@@ -521,4 +555,12 @@ article h1 {
 .div_user_info h1 {
 
 	font-weight: 400;
+}
+
+#username_img {
+
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	vertical-align: middle;
 }

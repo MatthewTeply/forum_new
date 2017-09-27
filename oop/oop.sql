@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Počítač: 127.0.0.1
--- Vytvořeno: Ned 24. zář 2017, 23:41
+-- Počítač: localhost
+-- Vytvořeno: Stř 27. zář 2017, 14:51
 -- Verze serveru: 10.1.21-MariaDB
 -- Verze PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -127,9 +129,7 @@ INSERT INTO `posts` (`id`, `title`, `content`, `op`, `mid`, `date_posted`) VALUE
 (126, '', 'Å¡Åˆupnul bych', 'jinambo', 122, '2017-09-21 12:14:56'),
 (128, 'MatyÃ¡Å¡ neumÃ­ v CÅ¡hÃ¡rku!!!', 'DobrÃ½ den dneÅ¡Ã­m dnem 21.09.2017bych vÃ¡m chtÄ›l oznÃ¡mit Å¾e spoleÄnost Cshrakus vychodila svÃ©ho bnejleÅ¡Ã­ho studentÃ­ka v CÃ­Ã­Ã­Å arku a tedu studentÃ­Äek je straÅ¡nÄ› dobrÃ½, ale jeho schpntriodi o hlsafnednÄ› CÅ¡horttku byli vymazani z jahu pamÄ›ti', 'RealJinambo', NULL, '2017-09-21 12:18:35'),
 (129, '', 'ok', 'admin', 128, '2017-09-21 12:19:47'),
-(130, 'Muhahahahahhahhahaha', 'Muhahahahahahhahahahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhaha', 'HeÄkermen', NULL, '2017-09-21 12:21:30'),
 (131, '', '\nMamch\'t na CÃ­pÅ¡arp', 'HeÄkermen', 122, '2017-09-21 12:23:49'),
-(132, '', 'Muhahahahahahhahahahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhahaahahahahahhaha', 'admin', 130, '2017-09-21 12:24:44'),
 (133, '', 'NenÃ­\n', 'HeÄkermen', 121, '2017-09-21 12:25:18'),
 (134, '', '', 'HeÄkermen', 121, '2017-09-21 12:25:19'),
 (135, '', 'Nejsou je to fake\n', 'HeÄkermen', 121, '2017-09-21 12:25:25'),
@@ -148,7 +148,6 @@ INSERT INTO `posts` (`id`, `title`, `content`, `op`, `mid`, `date_posted`) VALUE
 (178, '', '4', 'admin', 65, '2017-09-22 05:29:09'),
 (179, '', '5', 'admin', 65, '2017-09-22 05:29:12'),
 (180, '', '6', 'admin', 65, '2017-09-22 05:29:15'),
-(184, '', 'test', 'admin', 130, '2017-09-22 05:30:17'),
 (185, 'zdar', 'Äus, jak se mÃ¡te?', 'jirka1', NULL, '2017-09-22 05:57:20'),
 (187, '', 'lit fam', 'admin', 185, '2017-09-22 06:47:46'),
 (191, 'jsem buzerant', 'jsem teplej', 'wolfinek', NULL, '2017-09-22 08:21:39'),
@@ -159,7 +158,25 @@ INSERT INTO `posts` (`id`, `title`, `content`, `op`, `mid`, `date_posted`) VALUE
 (201, '', ':D', 'admin', 122, '2017-09-22 11:45:29'),
 (207, '', 'test comment', 'admin', 79, '2017-09-22 14:45:23'),
 (208, '', 'test comment #2', 'admin', 79, '2017-09-22 14:45:33'),
-(209, 'Test post', 'Test content', 'admin', NULL, '2017-09-24 21:34:01');
+(209, 'Test post', 'Test content', 'admin', NULL, '2017-09-24 21:34:01'),
+(212, '', 'Test comment!', 'admin', 209, '2017-09-27 07:55:11'),
+(213, '', 'Test comment #2!', 'admin', 209, '2017-09-27 11:37:27'),
+(214, '', 'Test comment #3!', 'admin', 209, '2017-09-27 11:38:24'),
+(215, '', 'fake!', 'admin', 121, '2017-09-27 11:42:54'),
+(216, '', 'Test comment #4!', 'admin', 209, '2017-09-27 11:51:49'),
+(217, '', 'Test comment #5!', 'admin', 209, '2017-09-27 11:52:03'),
+(218, '', 'Test comment #6!', 'admin', 209, '2017-09-27 11:52:29'),
+(219, '', 'Test comment #7!', 'admin', 209, '2017-09-27 11:52:57'),
+(220, '', 'Test comment #8!', 'admin', 209, '2017-09-27 11:54:49'),
+(221, '', 'Test comment #9!', 'admin', 209, '2017-09-27 11:55:48'),
+(222, '', 'Test comment #10!', 'admin', 209, '2017-09-27 11:56:12'),
+(223, '', 'loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum', 'admin', 209, '2017-09-27 12:15:42'),
+(224, '', 'adsdasdsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsad', 'admin', 209, '2017-09-27 12:16:52'),
+(225, '', 'd', 'admin', 209, '2017-09-27 12:20:57'),
+(226, '', 'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd', 'admin', 209, '2017-09-27 12:21:13'),
+(227, '', 'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd', 'admin', 209, '2017-09-27 12:21:24'),
+(228, '', 'sadasdasdasdasdasdadsadasdsafzudsfuzudsagtioudshafloÅ¯adsfjkhlaksdhfÅ¯lasdkhflkajdhfsluiaskdjfaloslfizhdÅ¯soilfakhsdfioashgdbfikasdjgfg,aslukdfjgas.diufjgasblufkgasbdlfkujgadslfkuasdjfga.sdkjfhalksduhgasdoiflhasdÅ¯oiflkhasd.fliajsfb.ladskjfhbasd.kjfa', 'admin', 209, '2017-09-27 12:21:55'),
+(229, '', 'loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum', 'admin', 209, '2017-09-27 12:22:15');
 
 -- --------------------------------------------------------
 
@@ -172,6 +189,7 @@ CREATE TABLE `users` (
   `uid` text NOT NULL,
   `pwd` text NOT NULL,
   `em` text NOT NULL,
+  `usr_img` text,
   `BAN` tinyint(1) NOT NULL DEFAULT '0',
   `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -180,21 +198,21 @@ CREATE TABLE `users` (
 -- Vypisuji data pro tabulku `users`
 --
 
-INSERT INTO `users` (`id`, `uid`, `pwd`, `em`, `BAN`, `admin`) VALUES
-(3, 'mates', '$2y$10$mfNfMV8uMEPgR2aLrmOFK.V0S2xDy2NcT84Cyyb1oerFnyir6/Mbe', 'email@email.com', 0, 0),
-(4, 'admin', '$2y$10$tcs1gxve9T/6PLlXoNsX6OM6wXX6XUFUiJj9kpChiUpzrvn/bMjvS', 'updater19@gmail.com', 0, 1),
-(5, 'mates123', '$2y$10$axTm6IKakINYLg/jxG0ha.sf3bU.IVvT4E6TZLW6t2p3vHVZq6WbK', 'mtxx@seznam.cz', 0, 0),
-(6, 'user1', '$2y$10$IGwzJvvXRueOsmaZhDI6p.n0UsPb.Mx.Pn43h0iBfYvcxCspg8JxK', 'email1@mail.com', 0, 0),
-(7, 'user2', '$2y$10$dKnIXKmqTC/fgXZXjMhxk.xtXrWHh7Q/BpO0CEcqWf8HR4yuzFDpi', 'email2@mail.com', 0, 0),
-(8, 'user3', '$2y$10$aRSdzt/do.3Ww.ftTu2SEes2DhdmA9Zq0gL5kOzcNhEd0DsdMpeXW', 'email3@mail.com', 0, 0),
-(9, 'jirka1', '$2y$10$hmND2mTX9IQkajuS/Tvq7OMaSsgq/lUV4V65M2xkZdVsEHv/PKWzO', 'jinambo@seznam.cz', 0, 1),
-(10, 'Jinambik', '$2y$10$v5nEtIq.ZbFM1vjCbHsrceGOgFK4jcLnE4of9piJdqlAaO3t0tXge', 'Nasrat@gmail.com', 0, 0),
-(11, 'PanÃ­ koÄiÄkovÃ¡', '$2y$10$Wkjd/feiHrm0PQnsVM0HyOyyw7v8p.6L5jwqQ92s.lF0ej62BOHCi', 'Kocickamucq@lul.cz', 0, 0),
-(13, 'wolfinek', '$2y$10$Oke4gGV3vxMhSjrcTL5EpOoaLSmq.F6anmhv0DYywmGSMUyVGyQga', 'jarmila12@seznam.com', 1, 0),
-(14, 'jinambo', '$2y$10$3B.GOoYmPB49JfZ18rQOuOMwyi5TmUFRuABJPl0nNk3QVjMk2U1tG', 'ukazkozy@gmail.com', 0, 0),
-(15, 'RealJinambo', '$2y$10$EVhFUsJe/TmemGaxvrI6f.H4XWWVz1S1/o3fEPhCULFCRy/6.n.W.', 'Jsemrealjinambo@hacker.com', 0, 0),
-(16, 'HeÄkermen', '$2y$10$9xCrplaZDss3tEaU1gWMUO9LbfWPWWh.ZyuuFSUR9CmLb14YoAmOW', 'test@hacker.com', 0, 0),
-(24, 'admin1', '$2y$10$suRaWX7LqpXkrHjr8EwZcO9SE70VBqEIRYBmbzYY9qgPGSoH2pUua', 'updater20@gmail.com', 0, 0);
+INSERT INTO `users` (`id`, `uid`, `pwd`, `em`, `usr_img`, `BAN`, `admin`) VALUES
+(3, 'mates', '$2y$10$mfNfMV8uMEPgR2aLrmOFK.V0S2xDy2NcT84Cyyb1oerFnyir6/Mbe', 'email@email.com', NULL, 0, 0),
+(4, 'admin', '$2y$10$tcs1gxve9T/6PLlXoNsX6OM6wXX6XUFUiJj9kpChiUpzrvn/bMjvS', 'updater19@gmail.com', 'uploads/admin_pic.jpg', 0, 1),
+(5, 'mates123', '$2y$10$axTm6IKakINYLg/jxG0ha.sf3bU.IVvT4E6TZLW6t2p3vHVZq6WbK', 'mtxx@seznam.cz', NULL, 0, 0),
+(6, 'user1', '$2y$10$IGwzJvvXRueOsmaZhDI6p.n0UsPb.Mx.Pn43h0iBfYvcxCspg8JxK', 'email1@mail.com', NULL, 0, 0),
+(7, 'user2', '$2y$10$dKnIXKmqTC/fgXZXjMhxk.xtXrWHh7Q/BpO0CEcqWf8HR4yuzFDpi', 'email2@mail.com', NULL, 0, 0),
+(8, 'user3', '$2y$10$aRSdzt/do.3Ww.ftTu2SEes2DhdmA9Zq0gL5kOzcNhEd0DsdMpeXW', 'email3@mail.com', NULL, 0, 0),
+(9, 'jirka1', '$2y$10$hmND2mTX9IQkajuS/Tvq7OMaSsgq/lUV4V65M2xkZdVsEHv/PKWzO', 'jinambo@seznam.cz', NULL, 0, 1),
+(10, 'Jinambik', '$2y$10$v5nEtIq.ZbFM1vjCbHsrceGOgFK4jcLnE4of9piJdqlAaO3t0tXge', 'Nasrat@gmail.com', NULL, 0, 0),
+(11, 'PanÃ­ koÄiÄkovÃ¡', '$2y$10$Wkjd/feiHrm0PQnsVM0HyOyyw7v8p.6L5jwqQ92s.lF0ej62BOHCi', 'Kocickamucq@lul.cz', NULL, 0, 0),
+(13, 'wolfinek', '$2y$10$Oke4gGV3vxMhSjrcTL5EpOoaLSmq.F6anmhv0DYywmGSMUyVGyQga', 'jarmila12@seznam.com', NULL, 1, 0),
+(14, 'jinambo', '$2y$10$3B.GOoYmPB49JfZ18rQOuOMwyi5TmUFRuABJPl0nNk3QVjMk2U1tG', 'ukazkozy@gmail.com', NULL, 0, 0),
+(15, 'RealJinambo', '$2y$10$EVhFUsJe/TmemGaxvrI6f.H4XWWVz1S1/o3fEPhCULFCRy/6.n.W.', 'Jsemrealjinambo@hacker.com', NULL, 0, 0),
+(16, 'HeÄkermen', '$2y$10$9xCrplaZDss3tEaU1gWMUO9LbfWPWWh.ZyuuFSUR9CmLb14YoAmOW', 'test@hacker.com', NULL, 1, 0),
+(24, 'admin1', '$2y$10$suRaWX7LqpXkrHjr8EwZcO9SE70VBqEIRYBmbzYY9qgPGSoH2pUua', 'updater20@gmail.com', NULL, 1, 0);
 
 --
 -- Klíče pro exportované tabulky
@@ -231,12 +249,13 @@ ALTER TABLE `pms`
 -- AUTO_INCREMENT pro tabulku `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
 --
 -- AUTO_INCREMENT pro tabulku `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

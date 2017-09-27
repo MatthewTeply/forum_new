@@ -44,10 +44,10 @@ function getComment_Art($conn) {
 	$comment->getComment_Article($conn, $_SESSION['209_uid']);
 }
 
-function showComment_Art($conn) {
+function showComment_Art($conn, $article_mid) {
 
 	$comment = new posts;
-	echo $comment->showComment_Article($conn, $_GET['art']);
+	echo $comment->showComment_Article($conn, $article_mid);
 }
 
 //=For Ajax=
@@ -63,3 +63,7 @@ if (isset($_POST['getContent_call']))
 //-SetComment-
 if (isset($_POST['setComment_call']))
 	setComment_Art($conn, $_POST['content'], $_SESSION['209_uid'], $_POST['mid']);
+
+//-GetComment-
+if (isset($_POST['showComment_call']))
+	showComment_Art($conn, $_POST['mid']);
